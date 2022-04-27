@@ -1,6 +1,29 @@
-## Getting Started
+# Next JS + Magic Link
 
-First, intall the required dependencies:
+This project demonstrates how to use [Magic Link](https://magic.link/) with thirdweb and Next.JS.
+
+Magic Link enables users to connect to your dApp using **email**, **phone number**, or **social login**.
+
+## Tools:
+
+- [Magic Link](https://magic.link/)
+- [Next.JS](https://nextjs.org/)
+- [thirdweb TypeScript SDK](https://docs.thirdweb.com/typescript)
+- [thirdweb React SDK](https://docs.thirdweb.com/react)
+
+## Using This Repo
+
+- Click on the **Use this template** button to create your own copy of this repo:
+
+![use this template.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1651048077489/WeMVOeg6W.png)
+
+- Create an account at https://magic.link/
+
+- Copy your **Publishable API Key** from the Magic Link dashboard.
+
+- Create a `.env.local` file at the root of your project, and add your key in the format: `NEXT_PUBLIC_MAGIC_LINK_API_KEY=xxx`, like as it is in `.env.example`.
+
+- Install the required dependencies:
 
 ```bash
 npm install
@@ -8,7 +31,7 @@ npm install
 yarn install
 ```
 
-Then, run the development server:
+- Run the development server:
 
 ```bash
 npm run dev
@@ -16,24 +39,7 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-On `pages/_app.tsx`, you'll find our `ThirdwebProvider` wrapping your app, this is necessary for our hooks to work.
-
-on `pages/index.tsx`, you'll find the `useMetamask` hook that we use to connect the user's wallet to MetaMask, `useDisconnect` that we use to disconnect it, and `useAddress` to check the user's wallet address once connected. 
-
-## Learn More
-
-To learn more about thirdweb and Next.js, take a look at the following resources:
-
-- [thirdweb React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
-- [thirdweb TypeScript Documentation](https://docs.thirdweb.com/react) - learn about our JavaScript/TypeScript SDK.
-- [thirdweb Portal](https://docs.thirdweb.com/react) - check our guides and development resources.
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-
-You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
+- Visit http://localhost:3000/ to view the demo.
 
 ## Join our Discord!
 

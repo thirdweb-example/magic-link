@@ -14,7 +14,7 @@ const magicLinkWalletConnector: WalletConnector = {
   name: "magic",
   options: {
     // Replace this with your own magic link api key
-    apiKey: "pk_live_05XXXXXXXXXXXXXX",
+    apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
     rpcUrls: {
       [ChainId.Mumbai]: "https://mumbai.magic.io/rpc",
     },
