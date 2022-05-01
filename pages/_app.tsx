@@ -40,15 +40,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         setShow={setShowGuideOverlay}
       />
       <Head>
-        <title>Signature Based Minting with Thirdweb and Next.js</title>
+        <title>thirdweb Magic.Link Wallet Connector</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Learn How To Do Signature Based Minting With Thirdweb And Next.JS To Create A Community Made NFT Collection with Thirdweb's ERC721 NFT Collection Contracts."
+          content="Learn How To Use Thirdweb's useMagic Hook To Connect User's To Your dApp Via Their Email, Phone Number, Or Social Media Account."
         />
         <meta
           name="keywords"
-          content="Thirdweb, NFT, Minting, Signature Minting, Signature Based Minting, Thirdweb NFT Collection, Thirdweb NFT Community Made Collection"
+          content="Thirdweb, Magic, Magic.Link, Wallet Connector, Social Media Wallet Connector, Email Address Wallet Connector, Phone Number Wallet Connector"
         />
       </Head>
       <Component {...pageProps} />
