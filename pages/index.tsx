@@ -7,36 +7,99 @@ const Home: NextPage = () => {
   const address = useAddress(); // Hook to grab the currently connected user's address.
   const connectWithMagic = useMagic(); // Hook to connect with Magic Link.
   const disconnectWallet = useDisconnect(); // Hook to disconnect from the connected wallet.
+
   const [email, setEmail] = useState<string>(""); // State to hold the email address the user entered.
 
   return (
-    <div className={styles.container}>
-      {/* If there is a wallet connected, show disconnect and the user's address */}
-      {address ? (
-        <>
-          <button className={styles.btn} onClick={disconnectWallet}>
-            Disconnect Wallet
-          </button>
-          <p>Your address: {address}</p>
-        </>
-      ) : (
-        // If there is no wallet connected, show the email input and the Magic Link connect button.
-        <>
-          <input
-            className={styles.input}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+    <>
+      {/* Header */}
+      <div className={styles.header}>
+        <div className={styles.left}>
+          <div>
+            <a
+              href="https://thirdweb.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={`/logo.png`} alt="Thirdweb Logo" width={135} />
+            </a>
+          </div>
+        </div>
+      </div>
 
-          <button
-            className={styles.btn}
-            onClick={() => connectWithMagic({ email })}
-          >
-            Login
-          </button>
-        </>
-      )}
-    </div>
+      <div className={styles.container}>
+        <h1 className={styles.h1}>thirdweb + Magic.Link</h1>
+        <p className={styles.explain}>
+          Connect users to your dApp using their email or social media accounts
+          using{" "}
+          <b>
+            {" "}
+            <a
+              href="https://thirdweb.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.purple}
+            >
+              thirdweb
+            </a>
+          </b>{" "}
+          and{" "}
+          <b>
+            {" "}
+            <a
+              href="https://magic.link/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.purple}
+            >
+              Magic.Link
+            </a>
+          </b>
+          .
+        </p>
+        <hr className={styles.divider} />
+
+        {address ? (
+          <>
+            <h2 style={{ fontSize: "1.3rem" }}>You&apos;re Connected! 👋</h2>{" "}
+            <p>{address}</p>
+            <a className={styles.mainButton} onClick={() => disconnectWallet()}>
+              Disconnect Wallet
+            </a>
+          </>
+        ) : (
+          <>
+            <h2 style={{ fontSize: "1.3rem" }}>Login With Email</h2>
+            <div
+              style={{
+                width: 500,
+                maxWidth: "90vw",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "row",
+                gap: 16,
+              }}
+            >
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className={styles.textInput}
+                style={{ width: "90%", marginBottom: 0 }}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <a
+                className={styles.mainButton}
+                onClick={() => connectWithMagic({ email })}
+              >
+                Login
+              </a>
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
