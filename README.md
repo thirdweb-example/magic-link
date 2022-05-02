@@ -4,6 +4,8 @@ This project demonstrates how to use [Magic Link](https://magic.link/) with thir
 
 Magic Link enables users to connect to your dApp using **email**, **phone number**, or **social login**.
 
+**Check out the Demo here**: https://next-magic-link.vercel.app/
+
 ## Tools:
 
 - [thirdweb React SDK](https://docs.thirdweb.com/react): We're using the [useAddress](https://docs.thirdweb.com/react/react.useaddress), [useMagic](https://docs.thirdweb.com/react/react.usemagic), and [useDisconnect](https://docs.thirdweb.com/react/react.usedisconnect) hooks from our React SDK to enable users to connect/disconnect to your dApp via their wallets, and to show information about their connected wallet.
