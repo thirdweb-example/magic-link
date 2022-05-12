@@ -15,10 +15,6 @@ Magic Link enables users to connect to your dApp using **email**, **phone number
 
 ## Using This Repo
 
-- Click on the **Use this template** button to create your own copy of this repo:
-
-![use this template.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1651048077489/WeMVOeg6W.png)
-
 - Create an account at https://magic.link/
 
 - Copy your **Publishable API Key** from the Magic Link dashboard.
