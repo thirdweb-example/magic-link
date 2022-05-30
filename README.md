@@ -1,4 +1,4 @@
-# Next JS + Magic Link
+# Magic Link Wallet Connection
 
 This project demonstrates how to use [Magic Link](https://magic.link/) with thirdweb using the [useMagic](https://docs.thirdweb.com/react/react.usemagic) hook from the [thirdweb React SDK](https://docs.thirdweb.com/react).
 
