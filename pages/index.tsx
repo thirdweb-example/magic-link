@@ -12,21 +12,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      {/* Header */}
-      <div className={styles.header}>
-        <div className={styles.left}>
-          <div>
-            <a
-              href="https://thirdweb.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={`/logo.png`} alt="Thirdweb Logo" width={135} />
-            </a>
-          </div>
-        </div>
-      </div>
-
       <div className={styles.container}>
         <h1 className={styles.h1}>thirdweb + Magic.Link</h1>
         <p className={styles.explain}>
