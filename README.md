@@ -21,23 +21,11 @@ Magic Link enables users to connect to your dApp using **email**, **phone number
 
 - Create a `.env.local` file at the root of your project, and add your key in the format: `NEXT_PUBLIC_MAGIC_LINK_API_KEY=xxx`, like as it is in `.env.example`.
 
-- Install the required dependencies:
+- Clone this example project by running:
 
 ```bash
-npm install
-# or
-yarn install
+npx create-tw-app --example magic-link
 ```
-
-- Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-- Visit http://localhost:3000/ to view the demo.
 
 # Guide
 
