@@ -4,7 +4,7 @@ This project demonstrates how to use [Magic Link](https://magic.link/) with thir
 
 Magic Link enables users to connect to your dApp using **email**, **phone number**, or **social login**.
 
-**Check out the Demo here**: https://next-magic-link.vercel.app/
+**Check out the Demo here**: https://magic-link.thirdweb-example.com
 
 ## Tools:
 
