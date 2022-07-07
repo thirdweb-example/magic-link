@@ -24,7 +24,7 @@ Magic Link enables users to connect to your dApp using **email**, **phone number
 - Clone this example project by running:
 
 ```bash
-npx thirdweb create --example magic-link
+npx thirdweb create --template magic-link
 ```
 
 # Guide
