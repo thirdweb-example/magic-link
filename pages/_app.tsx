@@ -13,8 +13,8 @@ import ThirdwebGuideFooter from "../components/ThirdwebGuideFooter";
 const activeChainId = ChainId.Mumbai;
 
 // Our Magic Link Wallet Connector configuration
-const magicLinkWalletConnector: WalletConnector = {
-  name: "magic",
+const magicLinkWalletConnector = {
+  name: "Magic",
   options: {
     // Replace this with your own magic link api key
     apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
       desiredChainId={activeChainId}
-      walletConnectors={connectors}
+      walletConnectors={[magicLinkWalletConnector as WalletConnector]}
     >
       <Head>
         <title>thirdweb Magic.Link Wallet Connector</title>
