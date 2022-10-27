@@ -14,7 +14,7 @@ const activeChainId = ChainId.Mumbai;
 
 // Our Magic Link Wallet Connector configuration
 const magicLinkWalletConnector = {
-  name: "Magic",
+  name: "magic",
   options: {
     // Replace this with your own magic link api key
     apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
       desiredChainId={activeChainId}
-      walletConnectors={connectors}
+      walletConnectors={connectors as WalletConnector[]}
       chainRpc={{
         [ChainId.Mumbai]: "https://rpc-mumbai.maticvigil.com",
       }}

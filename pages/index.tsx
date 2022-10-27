@@ -1,6 +1,5 @@
 import styles from "./styles/Home.module.css";
-import { useAddress, useDisconnect } from "@thirdweb-dev/react";
-import { useMagic } from "@thirdweb-dev/react/dist/declarations/src/evm/connectors/magic";
+import { useAddress, useDisconnect, useMagic } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
 import { useState } from "react";
 
