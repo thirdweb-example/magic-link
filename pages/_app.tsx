@@ -26,6 +26,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider
       desiredChainId={activeChainId}
       walletConnectors={connectors}
+      chainRpc={{
+        [ChainId.Mumbai]: "https://rpc-mumbai.maticvigil.com",
+      }}
     >
       <Head>
         <title>thirdweb Magic.Link Wallet Connector</title>
