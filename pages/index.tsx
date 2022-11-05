@@ -1,7 +1,8 @@
 import styles from "./styles/Home.module.css";
-import { useAddress, useDisconnect, useMagic } from "@thirdweb-dev/react";
+import { useAddress, useDisconnect } from "@thirdweb-dev/react";
 import type { NextPage } from "next";
 import { useState } from "react";
+import { useMagic } from "@thirdweb-dev/react/evm/connectors/magic";
 
 const Home: NextPage = () => {
   const address = useAddress(); // Hook to grab the currently connected user's address.
@@ -76,7 +77,9 @@ const Home: NextPage = () => {
 
               <a
                 className={styles.mainButton}
-                onClick={() => connectWithMagic({ email })}
+                onClick={() => {
+                  connectWithMagic({ email });
+                }}
               >
                 Login
               </a>

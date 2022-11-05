@@ -1,31 +1,25 @@
 import React from "react";
 import type { AppProps } from "next/app";
-import {
-  ChainId,
-  ThirdwebProvider,
-  WalletConnector,
-} from "@thirdweb-dev/react";
+import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import "./styles/globals.css";
 import Head from "next/head";
 import ThirdwebGuideFooter from "../components/ThirdwebGuideFooter";
+import { MagicConnector } from "@thirdweb-dev/react/evm/connectors/magic";
 
 // This is the chainId your dApp will work on.
 const activeChainId = ChainId.Mumbai;
 
-// Our Magic Link Wallet Connector configuration
-const magicLinkWalletConnector: WalletConnector = {
-  name: "magic",
+const magicLinkConnector = new MagicConnector({
   options: {
-    // Replace this with your own magic link api key
     apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
     rpcUrls: {
       [ChainId.Mumbai]: "https://mumbai.magic.io/rpc",
     },
   },
-};
+});
 
 // Array of wallet connectors you want to use for your dApp.
-const connectors = [magicLinkWalletConnector];
+const connectors = [magicLinkConnector];
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
