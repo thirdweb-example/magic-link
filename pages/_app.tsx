@@ -13,7 +13,7 @@ const magicLinkConnector = new MagicConnector({
   options: {
     apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
     rpcUrls: {
-      [ChainId.Mumbai]: "https://mumbai.magic.io/rpc",
+      [ChainId.Mumbai]: "https://rpc-mumbai.maticvigil.com",
     },
   },
 });
