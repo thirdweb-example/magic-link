@@ -18,14 +18,11 @@ const magicLinkConnector = new MagicConnector({
   },
 });
 
-// Array of wallet connectors you want to use for your dApp.
-const connectors = [magicLinkConnector];
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
       desiredChainId={activeChainId}
-      walletConnectors={connectors}
+      walletConnectors={[magicLinkConnector, "metamask", "walletConnect"]}
       chainRpc={{
         [ChainId.Mumbai]: "https://rpc-mumbai.maticvigil.com",
       }}
