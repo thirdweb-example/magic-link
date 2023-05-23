@@ -1,19 +1,19 @@
 import React from "react";
 import type { AppProps } from "next/app";
-import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 import "./styles/globals.css";
 import Head from "next/head";
 import ThirdwebGuideFooter from "../components/ThirdwebGuideFooter";
 import { MagicConnector } from "@thirdweb-dev/react/evm/connectors/magic";
 
-// This is the chainId your dApp will work on.
-const activeChainId = ChainId.Mumbai;
+// This is the chain your dApp will work on.
+const activeChain = "mumbai";
 
 const magicLinkConnector = new MagicConnector({
   options: {
     apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
     rpcUrls: {
-      [ChainId.Mumbai]: "https://rpc-mumbai.maticvigil.com",
+      [activeChain]: "https://rpc-mumbai.maticvigil.com",
     },
   },
 });
@@ -24,10 +24,10 @@ const connectors = [magicLinkConnector];
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
-      desiredChainId={activeChainId}
+      activeChain={activeChain}
       walletConnectors={connectors}
       chainRpc={{
-        [ChainId.Mumbai]: "https://rpc-mumbai.maticvigil.com",
+        [activeChain]: "https://rpc-mumbai.maticvigil.com",
       }}
     >
       <Head>

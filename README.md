@@ -42,7 +42,7 @@ Over in [_app.tsx](./pages/_app.tsx) we are wrapping our application with the [T
 **Configuring the Network**
 
 ```ts
-const activeChainId = ChainId.Mumbai;
+const activeChain = "mumbai";
 ```
 
 **Configuring the Magic Link Wallet Connector**
@@ -54,7 +54,7 @@ const magicLinkWalletConnector: WalletConnector = {
     // Replace this with your own magic link api key
     apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
     rpcUrls: {
-      [ChainId.Mumbai]: "https://mumbai.magic.io/rpc",
+      [activeChain]: "https://mumbai.magic.io/rpc",
     },
   },
 };
